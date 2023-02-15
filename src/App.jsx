@@ -5,11 +5,12 @@ import { Account } from "./components/steps/Account";
 import { Details } from "./components/steps/Details";
 import { Complete } from "./components/steps/Complete";
 import { useState } from "react";
+import { Payment } from "./components/steps/Payment";
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
 
-  const steps = ["Account information", "Personal Details", "Complete"];
+  const steps = ["Account information", "Personal Details", "Payment"];
 
   const displayStep = (step) => {
     switch (step) {
@@ -18,6 +19,8 @@ function App() {
       case 2:
         return <Details />;
       case 3:
+        return <Payment />;
+      case 4:
         return <Complete />;
       default:
     }
@@ -27,7 +30,7 @@ function App() {
     let newStep = currentStep;
     direction === "next" ? newStep++ : newStep--;
 
-    newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
+    newStep > 0 && newStep <= steps.length + 1 && setCurrentStep(newStep);
   };
 
   return (
@@ -37,7 +40,8 @@ function App() {
       </div>
 
       <div className="my-10 p-10">{displayStep(currentStep)}</div>
-      {currentStep !== steps.length && (
+
+      {currentStep !== steps.length + 1 && (
         <StepperControl
           handleClick={handleClick}
           currentStep={currentStep}
