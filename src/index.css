@@ -2,6 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 *,
 *::before,
 *::after {
@@ -16,4 +17,9 @@ body {
   min-width: 320px;
   position: relative;
   color: #262626;
+}
+
+.input-text:focus ~ .span-text,
+.input-text:not(:placeholder-shown).input-text:not(:focus) ~ .span-text {
+  @apply text-blue-500 bg-white transform -translate-y-[36px] -translate-x-[11px] scale-75;
 }

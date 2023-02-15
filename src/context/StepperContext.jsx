@@ -9,14 +9,11 @@ export const useStepper = () => {
 };
 
 export const StepperProvider = ({ children }) => {
-  const [userData, setUserData] = useState("");
-  const [finalData, setFinalData] = useState([]);
+  const [userData, setUserData] = useState({});
 
   const value = {
     userData,
-    setUserData,
-    finalData,
-    setFinalData
+    setUserData
   };
 
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 import { useStepper } from "../../context/StepperContext";
+import { Input } from "../Input";
 
 export const Account = () => {
   const { userData, setUserData } = useStepper();
@@ -9,5 +10,27 @@ export const Account = () => {
     setUserData({ ...userData, [name]: value });
   };
 
-  return <div className="flex flex-col">Account</div>;
+  return (
+    <div className="flex flex-col">
+      <div className="mb-5">
+        <Input
+          type="text"
+          text="Username"
+          name="username"
+          value={userData["username"] || ""}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div>
+        <Input
+          type="password"
+          text="Password"
+          name="password"
+          value={userData["password"] || ""}
+          onChange={handleChange}
+        />
+      </div>
+    </div>
+  );
 };
