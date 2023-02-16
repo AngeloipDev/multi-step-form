@@ -1,4 +1,3 @@
-import React from "react";
 import check from "../../img/checksymbol.svg";
 
 export const Complete = () => {
@@ -9,10 +8,10 @@ export const Complete = () => {
           <img src={check} alt="check" className="h-20" />
         </div>
 
-        <div className="mt-3 text-xl font-semibold uppercase text-green-500">
+        <div className="mt-3 text-xl font-semibold uppercase text-green-500 text-center">
           Congratulations!
         </div>
-        <div className="text-lg font-semibold text-gray-500">
+        <div className="text-lg font-semibold text-gray-500 text-center">
           Your Account has been created.
         </div>
         <a className="mt-10" href="/">

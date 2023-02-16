@@ -1,4 +1,3 @@
-import React from "react";
 import { useStepper } from "../../context/StepperContext";
 import { Input } from "../Input";
 

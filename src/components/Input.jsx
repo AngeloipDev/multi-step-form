@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Input = ({ type, name, text, onChange, value }) => {
   return (
     <div className="relative h-11">
