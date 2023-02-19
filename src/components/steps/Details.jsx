@@ -10,7 +10,7 @@ export const Details = () => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col step_box">
       <div className="mb-5">
         <Input
           type="text"

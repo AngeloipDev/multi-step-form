@@ -23,3 +23,16 @@ body {
 .input-text:not(:placeholder-shown).input-text:not(:focus) ~ .span-text {
   @apply text-blue-500 bg-white transform -translate-y-[36px] -translate-x-[11px] scale-75;
 }
+
+.step_box {
+  display: block;
+  animation: fade 0.3s ease-in-out;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

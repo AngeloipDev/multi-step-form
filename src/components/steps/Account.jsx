@@ -10,7 +10,7 @@ export const Account = () => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col tabs__content step_box">
       <div className="mb-5">
         <Input
           type="text"

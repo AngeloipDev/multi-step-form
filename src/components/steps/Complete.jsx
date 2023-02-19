@@ -2,7 +2,7 @@ import check from "../../img/checksymbol.svg";
 
 export const Complete = () => {
   return (
-    <div className="container md:mt-10">
+    <div className="container md:mt-10 step_box">
       <div className="flex flex-col items-center">
         <div className="wrapper">
           <img src={check} alt="check" className="h-20" />

@@ -1,3 +1,3 @@
 export const Payment = () => {
-  return <div>Payment</div>;
+  return <div className="step_box">Payment</div>;
 };
